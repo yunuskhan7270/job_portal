@@ -41,3 +41,8 @@ pip install -r requirements.txt
 #for code run go to JOB_PORTAL and run command
 
 python run.py
+
+
+# Urls
+http://localhost:5000/register
+http://localhost:5000/login
