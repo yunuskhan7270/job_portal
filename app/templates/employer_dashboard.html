@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Post a Job</h2>
+<form method="POST">
+  {{ form.hidden_tag() }}
+  <div class="mb-3">{{ form.title.label }} {{ form.title(class="form-control") }}</div>
+  <div class="mb-3">{{ form.description.label }} {{ form.description(class="form-control") }}</div>
+  <div>{{ form.submit(class="btn btn-primary") }}</div>
+</form>
+
+<h3 class="mt-4">Your Posted Jobs</h3>
+<ul class="list-group">
+  {% for job in jobs %}
+    <li class="list-group-item"><b>Title:- </b>{{ job.title }}</li>
+    <li class="list-group-item"><b>Description:- </b>{{ job.description }}</li>
+    <li class="list-group-item"><b>Created at :- </b>{{ job.created_at }}</li>
+    <br>
+  {% else %}
+    <p>No jobs posted yet.</p>
+  {% endfor %}
+</ul>
+{% endblock %}

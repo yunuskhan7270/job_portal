@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Admin Dashboard</h2>
+<ul class="list-group">
+  <li class="list-group-item">Total Jobs: {{ jobs }}</li>
+  <li class="list-group-item">Total Employers: {{ employers }}</li>
+  <li class="list-group-item">Total Jobseekers: {{ seekers }}</li>
+</ul>
+{% endblock %}
